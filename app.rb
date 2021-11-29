@@ -18,9 +18,7 @@ get '/coffee' do
 end
 
 get '/cat' do
-  "<div style='border: 10px solid blue'>
-    <img src='https://i.imgur.com/jFaSxym.png'>
-   </div>"
+  erb(:index)
 end
 
 get '/time' do
