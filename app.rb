@@ -17,8 +17,14 @@ get '/coffee' do
   "It's time for coffee"
 end
 
-get '/cat' do
-  @catname = ["Amigo", "Misty", "Almond"].sample
+get '/random-cat' do
+  @name = ["Amigo", "Misty", "Almond"].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
   erb(:index)
 end
 
